@@ -1,11 +1,12 @@
 package frontend;
 
+import calendario.Evento;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
-import grupo13.trabajopractico.Evento;
+
 import java.util.Iterator;
 
 public class CalendarioApp {
@@ -112,7 +113,7 @@ public class CalendarioApp {
     formularioFrame.setLayout(new GridLayout(5, 2));
 
     JTextField nombreField = new JTextField(evento != null ? evento.getNombre() : "");
-    JTextField fechaField = new JTextField(evento != null ? evento.getFecha() : "");
+    JTextField fechaField = new JTextField(evento != null ? evento.getFecha().toString() : "");
     JTextField ubicacionField = new JTextField(evento != null ? evento.getUbicacion() : "");
     JTextField descripcionField = new JTextField(evento != null ? evento.getDescripcion() : "");
 
